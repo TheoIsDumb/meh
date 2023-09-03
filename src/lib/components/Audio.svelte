@@ -1,14 +1,14 @@
 <script>
   import Muted from "$lib/icons/Muted.svelte";
   import Unmuted from "$lib/icons/Unmuted.svelte";
+  import Play from "$lib/icons/Play.svelte";
 
+  let audio
   let muted = false
   let paused = false
-
-  $: console.log(paused)
 </script>
 
-<audio bind:paused bind:muted loop autoplay src="blippy.opus" />
+<audio bind:this={audio} bind:paused bind:muted loop autoplay src="blippy.opus" />
 
 <button on:click={() => muted = !muted }>
   {#if muted}
@@ -16,6 +16,10 @@
   {:else}
     <Unmuted />
   {/if}
+</button>
+
+<button on:click={() => audio.play()}>
+    <Play />
 </button>
 
 <style>
