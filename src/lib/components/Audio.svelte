@@ -5,10 +5,9 @@
 
   let audio
   let muted = false
-  let paused = false
 </script>
 
-<audio bind:this={audio} bind:paused bind:muted loop autoplay src="blippy.opus" />
+<audio bind:this={audio} bind:muted loop autoplay src="blippy.opus" />
 
 <button on:click={() => muted = !muted }>
   {#if muted}
