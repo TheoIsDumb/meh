@@ -5,7 +5,7 @@
   import Sidebar from './Sidebar.svelte';
 </script>
 
-<Canvas background="white">
+<Canvas>
   <Scene />
 </Canvas>
 
