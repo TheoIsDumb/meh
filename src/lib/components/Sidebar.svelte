@@ -20,6 +20,7 @@
   div.sidebar {
     position: fixed;
     bottom: 1rem;
+    cursor: pointer;
     right: 1rem;
     display: flex;
     flex-direction: column;
