@@ -1,9 +1,11 @@
 <script>
   import App from '$lib/components/App.svelte'
+  import { parentDiv } from '$lib/store'
 </script>
 
-<div>
+<div bind:this={$parentDiv}>
   <App />
+
 </div>
 
 <style>
